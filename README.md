@@ -11,3 +11,4 @@
 - GTK theme: <a href="https://github.com/koiosdev/Tokyo-Night-Linux">Tokyo-Night-Linux</a>
 - Spicetify theme: <a href="https://github.com/morpheusthewhite/spicetify-themes">Sleek</a> with custom TokyoNight css
 - BetterDiscord theme: <a href="https://betterdiscord.app/theme/Nocturnal">Nocturnal</a>
+- Font: <a href="https://github.com/ryanoasis/nerd-fonts">JetBrainsMono Nerd Font</a>
