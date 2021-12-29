@@ -12,3 +12,4 @@
 - Spicetify theme: <a href="https://github.com/morpheusthewhite/spicetify-themes">Sleek</a> with custom TokyoNight color.ini
 - BetterDiscord theme: <a href="https://betterdiscord.app/theme/Nocturnal">Nocturnal</a>
 - Font: <a href="https://github.com/ryanoasis/nerd-fonts">JetBrainsMono Nerd Font</a>
+- Terminal: <a href="https://github.com/alacritty/alacritty">Alacritty</a>
