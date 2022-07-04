@@ -13,7 +13,7 @@ super + Return
 
 # Shortcut Helper
 super + alt + h
-	~/scripts/sxhkd-help-menu &
+	~/.scripts/sxhkd-help-menu &
 
 # Rofi menu
 super + r
@@ -21,7 +21,7 @@ super + r
 
 # Power menu
 super + Escape
-	~/scripts/powermenu.sh &
+	~/.scripts/powermenu.sh &
 
 # ----------------------------------------
 # BSPWM hotkeys
