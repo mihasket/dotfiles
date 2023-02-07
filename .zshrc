@@ -46,8 +46,7 @@ export PROMPT='%F{blue}%~ %F{default}${vcs_info_msg_0_}${NEWLINE}%F{white}» '
 # Alias
 alias ls="ls --color=auto"
 alias nano="nano -litzx"
-alias vim="nvim"
-alias code="codium"
+alias youtube-dl-mp3="youtube-dl --extract-audio --audio-format mp3"
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
