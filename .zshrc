@@ -19,7 +19,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Path
-export PATH="/home/miha/.local/bin:$PATH"
+export PATH="/home/$USER/.local/bin:$PATH"
 
 # Keybindings
 bindkey "^[[1;5C" forward-word
