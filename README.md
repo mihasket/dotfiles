@@ -1,15 +1,20 @@
 # BSPWM Dotfiles
 My linux dotfiles. A work in progress.
 
-## Dark mode
-![Dark Mode 1](/Screenshot/dark_mode_1.png)
+![](/Screenshot/desktop_1.png)
+![](/Screenshot/desktop_2.png)
+![](/Screenshot/neovim.png)
 
-## Light Mode
-![Light Mode 1](/Screenshot/light_mode_1.png)
-![Light Mode 2](/Screenshot/light_mode_2.png)
-![Light Mode 3](/Screenshot/light_mode_3.png)
+# Tools
+- BSWPM, sxhkd
+- Polybar
+- Thunar
+- Dunst
+- Rofi
+- Neovim
+- Thunar
+- Alacritty
 
-# To Do:
-- Add new BSPWM hotkeys
-- Add rofi themes
-- Add thunar theme
+# Theme:
+- Polybar, dunst, rofi custom theme
+- <a href="https://github.com/morhetz/gruvbox">Gruvbox</a>
