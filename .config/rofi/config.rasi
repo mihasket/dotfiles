@@ -3,4 +3,4 @@ configuration {
 	font: "JetBrainsMono Nerd Font 12";
 	combi-modi: "window,drun,ssh";
 }
-@theme "/usr/share/rofi/themes/gruvbox-light-soft.rasi"
+@theme "/usr/share/rofi/themes/dark-mode.rasi"
