@@ -9,9 +9,9 @@ window:
 # Font configuration
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono NFM
   # Point size
-  size: 9.0
+  size: 11.0
   #size: 14.0
   
 # Colors
@@ -19,7 +19,8 @@ colors:
   # Default colors
   primary:
     # hard contrast: background = '#1d2021'
-    background: '#282828'
+    #background: '#282828'
+    background: '#151619'
     # soft contrast: background = '#32302f'
     foreground: '#ebdbb2'
 
