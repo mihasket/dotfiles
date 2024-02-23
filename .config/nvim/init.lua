@@ -157,9 +157,6 @@ require('lazy').setup({
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'catppuccin-mocha'
-    end,
   },
 
   {
@@ -296,6 +293,16 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
+
+-- Catppuccin color
+require("catppuccin").setup {
+    color_overrides = {
+        mocha = {
+            base = "#262626",
+        },
+    }
+}
+vim.cmd.colorscheme 'catppuccin-mocha'
 
 -- [[ Basic Keymaps ]]
 
