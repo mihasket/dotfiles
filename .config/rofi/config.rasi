@@ -1,6 +1,17 @@
 configuration {
-	modi: "window,drun,ssh,combi";
-	font: "JetBrainsMono Nerd Font 12";
-	combi-modi: "window,drun,ssh";
+    show-icons: true;
+    /*font: "JetBrainsMono NFM 12";*/
+    font: "SF Pro Text Medium 12";
+    icon-theme: "Papirus-Dark";
+
+    display-ssh:    "󰣀  ssh:";
+    display-run:    "󱓞  run:";
+    display-drun:   "󰣖  drun:";
+    display-window: "󱂬  window:";
+    display-combi:  "󰕘  combi:";
+    display-filebrowser: "󰉋  filebrowser:";
+
+    dpi: 120;
 }
-@theme "/usr/share/rofi/themes/dark-mode.rasi"
+
+@theme "gruvbox-material"
