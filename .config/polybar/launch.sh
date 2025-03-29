@@ -7,6 +7,6 @@ polybar-msg cmd quit
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch
-polybar main &
+polybar --config=$HOME/.config/polybar/config.ini main &
 
 echo "Bar launched..."
