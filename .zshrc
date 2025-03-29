@@ -20,13 +20,7 @@ export LANG=en_US.UTF-8
 
 # Path
 export PATH="/home/$USER/.local/bin:$PATH"
-
-# Keybindings
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
-# History substring keybindings 
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+export PATH=$PATH:/usr/local/go/bin
 
 # Zsh autocompletion
 typeset -A ZSH_HIGHLIGHT_STYLES
@@ -48,9 +42,15 @@ export PROMPT='%F{blue}%~ %F{default}${vcs_info_msg_0_}${NEWLINE}%F{white}» '
 
 # Alias
 alias ls="ls --color=auto"
-alias nano="nano -litzx"
-alias youtube-dl-mp3="youtube-dl --extract-audio --audio-format mp3"
+alias youtube-dl-mp3="yt-dlp --extract-audio --audio-format mp3"
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Keybindings
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+# History substring keybindings 
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
