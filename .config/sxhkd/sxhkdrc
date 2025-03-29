@@ -2,10 +2,11 @@
 
 # ----------------------------------------
 # Basic applications 
+# {firefox, chromium, thunar, flatpak run com.discordapp.Discord, spotify}
 #-----------------------------------------
 
-alt + {b,n,e,d}
-	{firefox, chromium, thunar, discord}
+alt + {b,n,e,d, s}
+	{flatpak run io.github.zen_browser.zen, chromium, thunar, flatpak run dev.vencord.Vesktop, spotify}
 
 # Terminal
 super + Return
@@ -22,6 +23,9 @@ super + r
 # Power menu
 super + Escape
 	~/.scripts/powermenu.sh &
+
+super + alt + s
+	flameshot screen
 
 # ----------------------------------------
 # BSPWM hotkeys
@@ -48,8 +52,8 @@ super + t
 	bspc node focused -t tiled
 
 # Change workspace
-super + {1-5}
-	bspc desktop -f {1-5}
+super + {1-7}
+	bspc desktop -f {1-7}
 
 # Move current window to a pre-selected space
 super + shift + m
@@ -60,8 +64,8 @@ super + shift + {d,a}
     bspc node @/ -C {forward,backward}
 
 # Send to desktop
-super + shift + {1-5}
-    bspc node -d '^{1-5}' --follow
+super + shift + {1-7}
+    bspc node -d '^{1-7}' --follow
 
 # Swap the current node with the biggest window
 super + g
