@@ -841,9 +841,12 @@ require('lazy').setup({
   },
 
   {
-    'ellisonleao/gruvbox.nvim',
+    'AlexvZyl/nordic.nvim',
+    lazy = false,
     priority = 1000,
-    config = true,
+    config = function()
+      require('nordic').load()
+    end,
   },
 
   {
@@ -974,14 +977,6 @@ require('lazy').setup({
 -- Select and move selected lines up and down
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
-
-require('gruvbox').setup {
-  palette_overrides = {
-    dark0 = '#111111',
-  },
-}
-vim.o.background = 'dark'
-vim.cmd [[colorscheme gruvbox]]
 
 -- Configure nvim-neo-tree
 require('neo-tree').setup {

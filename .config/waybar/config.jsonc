@@ -1,0 +1,78 @@
+{
+    "layer": "top",
+    "height": 28,
+    "spacing": 4,
+    "modules-left": [
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "clock",
+        "tray"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "format-icons": {
+            "1": "",
+            "2": "󰈹",
+            "3": "",
+            "4": "",
+            "5": ""
+        }
+    },
+    "hyprland/window": {
+        "format": "{title}",
+        "rewrite": {
+            "(.*)Zen Browser(.*)": "Zen Browser ",
+            "nvim(.*)": "Neovim ",
+            "(.*) - VSCodium": "VSCode 󰨞",
+            "Discord(.*)": "Discord ",
+            "Spotify Free": "Spotify ",
+            "tmux": "Tmux "
+        }
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 15
+    },
+    "clock": {
+        "format": " {:%a %b %d %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "network": {
+        "format-ethernet": "󰈀 Online",
+        "format-disconnected": "󰈂 Offline"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}",
+        "rotate": 0,
+        "format-muted": "婢",
+        "on-click": "pavucontrol -t 3",
+        "on-click-right": "volumecontrol.sh -s ''",
+        "on-click-middle": "volumecontrol.sh -o m",
+        "on-scroll-up": "volumecontrol.sh -o i",
+        "on-scroll-down": "volumecontrol.sh -o d",
+        "tooltip-format": "{icon} {desc} // {volume}%",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+    "custom/space": {
+        "format": "  ",
+		"tooltip": false
+    }
+}
