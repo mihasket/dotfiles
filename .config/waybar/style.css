@@ -4,8 +4,9 @@
     font-size: 16px;
 }
 
-window#waybar {
-    background-color: transparent;
+#waybar {
+    background: #151619;
+    border-radius: 0;
 }
 
 #workspaces {
@@ -18,29 +19,21 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #d8dee9;
+    color: #e6e6e6;
 }
 
-window#waybar.empty #window {
-    background-color: transparent;
+#workspaces button:hover {
+    background: #2A2D2E;
 }
 
 #window,
-#workspaces,
 .modules-right
 {
-    background-color: #4c566a;
-    border-radius: 21px;
-    padding: 0 25px 0 20px;
-    margin: 0;
+    padding: 0 25px 0 25px;
 }
 
-.modules-left {
-    margin-left: 20px;
-}
-
-.modules-right {
-    margin-right: 20px;
+#workspaces {
+    padding: 0 15px 0 10px;
 }
 
 #pulseaudio {
