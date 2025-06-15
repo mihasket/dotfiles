@@ -14,31 +14,40 @@ zstyle ':completion:*' menu select
 autoload -Uz compinit
 compinit
 
-# Languages
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+# Enable truecolor support in your terminal
+export TERM="xterm-256color"
+export COLORTERM=truecolor
 
-# Path
-export PATH="/home/$USER/.local/bin:$PATH"
-export PATH=$PATH:/usr/local/go/bin
-
-# Zsh autocompletion
+# Use 24-bit RGB colors for highlighting
 typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=green,underline
-ZSH_HIGHLIGHT_STYLES[precommand]=fg=green,underline
-ZSH_HIGHLIGHT_STYLES[arg0]=fg=green
+
+# Match Catppuccin Mocha palette
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=rgb:180/190/254,underline'   # Lavender
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=rgb:250/179/135,underline'     # Peach
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=rgb:rgb:116/199/236'                      # Green
 
 # Prompt
-# Load version control information
-autoload -Uz vcs_info
-precmd() { vcs_info }
+setopt prompt_subst
 
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats 'on %F{yellow}%b'
+# Define RGB escape helper
+function rgb_fg() {
+  printf '\e[38;2;%d;%d;%dm' $1 $2 $3
+}
+function reset_color() {
+  printf '\e[0m'
+}
 
 NEWLINE=$'\n'
-setopt PROMPT_SUBST
-export PROMPT='%F{blue}%~ %F{default}${vcs_info_msg_0_}${NEWLINE}%F{white}» '
+
+# Prompt using Catppuccin Mocha colors
+PROMPT='%{$(rgb_fg 137 180 250)%}%~ '
+PROMPT+='%{$(rgb_fg 245 224 220)%}${vcs_info_msg_0_}${NEWLINE}'
+PROMPT+='%{$(rgb_fg 235 160 172)%} '
+PROMPT+='%{$(reset_color)%}'
+
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats 'on %b'
 
 # Alias
 alias ls="ls --color=auto"
@@ -47,6 +56,7 @@ alias youtube-dl-mp3="yt-dlp --extract-audio --audio-format mp3"
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 # Keybindings
 bindkey "^[[1;5C" forward-word
@@ -54,3 +64,15 @@ bindkey "^[[1;5D" backward-word
 # History substring keybindings 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+export PATH=$PATH:/home/miha/.spicetify
+
+export FLYCTL_INSTALL="/home/miha/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+# fnm
+FNM_PATH="/home/miha/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/miha/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
