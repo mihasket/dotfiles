@@ -1,9 +1,9 @@
 {
     "layer": "top",
-    "height": 28,
+    "height": 40,
     "spacing": 4,
     "modules-left": [
-        "hyprland/window"
+        "custom/logo"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -11,6 +11,7 @@
     "modules-right": [
         "pulseaudio",
         "network",
+        "custom/dateicon",
         "clock",
         "tray"
     ],
@@ -20,11 +21,14 @@
             "*": 5
         },
         "format-icons": {
-            "1": "",
-            "2": "󰈹",
-            "3": "",
-            "4": "",
-            "5": ""
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "active": "",
+            "default": ""
         }
     },
     "hyprland/window": {
@@ -40,18 +44,19 @@
     },
     "tray": {
         "icon-size": 16,
-        "spacing": 15
+        "spacing": 15,
+        "show-passive-items": false
     },
     "clock": {
-        "format": " {:%a %b %d %H:%M}",
+        "format": "{:%a %b %d %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "network": {
-        "format-ethernet": "󰈀 Online",
-        "format-disconnected": "󰈂 Offline"
+        "format-ethernet": "󰖩 ",
+        "format-disconnected": "󰖪 "
     },
     "pulseaudio": {
-        "format": "{icon} {volume}",
+        "format": "{icon}",
         "rotate": 0,
         "format-muted": "婢",
         "on-click": "pavucontrol -t 3",
@@ -73,6 +78,14 @@
     },
     "custom/space": {
         "format": "  ",
-		"tooltip": false
+        "tooltip": false
+    },
+    "custom/logo": {
+        "format": "󰌽",
+        "tooltip": false
+    },
+    "custom/dateicon": {
+        "format": " ",
+        "tooltip": false
     }
 }
