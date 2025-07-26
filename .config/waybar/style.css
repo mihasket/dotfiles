@@ -4,7 +4,7 @@
   font-size: 18px;
 }
 
-window#waybar {
+#waybar {
   background-color: rgba(44, 44, 46, 0.8);
 }
 
